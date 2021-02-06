@@ -1,9 +1,9 @@
 Label,Journals,Type,Description
-"devNeuroscience",1,"Neuroscience","Neuroscience: Developmental Neuroscience"
-"obAndGyn",0,"Medicine","Medicine: Obstetrics and Gynecology"
-"pediatrics",0,"Medicine","Medicine: Pediatrics, Perinatology, and Child Health"
 "psychiatry",2,"Medicine","Medicine: Medicine: Psychiatry and Mental Health"
+"pediatrics",0,"Medicine","Medicine: Pediatrics, Perinatology, and Child Health"
+"obAndGyn",0,"Medicine","Medicine: Obstetrics and Gynecology"
+"devNeuroscience",1,"Neuroscience","Neuroscience: Developmental Neuroscience"
 "publicHealth",7,"Medicine","Medicine: Public Health, Environmental and Occupational Health"
 "policy",13,"Environmental Science","Environmental Science: Management, Monitoring, Policy, and Law"
 "aquaticScience",22,"Agricultural and Biological Sciences","Agricultural and Biological Sciences: Aquatic Science"
-"other",279,"Other","Other: Journals that do not fall under any category of interest"
+"other",256,"Other","Other: Journals that do not fall under any category of interest"

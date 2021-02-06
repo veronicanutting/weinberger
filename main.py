@@ -29,10 +29,10 @@ def getCategories():
 # Iterate over each category of interest and categorize all journals
 def categorizeJournals():
     global categories,journals,total_journals
+    categorized = 0
     for category in categories.keys():
         with open("categories/" + str(category)+'.csv', 'r') as csvfile:
             data = csv.DictReader(csvfile, delimiter=";")
-            categorized = 0
             for d in data:
                 if d["Title"].lower() in journals.keys() and journals[d["Title"].lower()] == "other":
                     journals[d["Title"].lower()] = category
@@ -48,16 +48,16 @@ def categorizeCitations():
     with open('network/citations.csv', 'r') as csvfile:
         data = csv.DictReader(csvfile)
 
-        # If A cited B, this will be encoded as 'from' A 'to' B
+        # If A cited B, then A is the citer and B cited, arrow from A to B
         for d in data:
-            from_category = journals[d["source"].lower()]
-            to_category = journals[d["journal"].lower()]
+            citer = journals[d["journal"].lower()]
+            cited = journals[d["source"].lower()]
 
             # Keep track of citation weights
-            if (from_category,to_category) in citations.keys():
-                citations[(from_category,to_category)] += 1
+            if (citer,cited) in citations.keys():
+                citations[(citer,cited)] += 1
             else:
-                citations[(from_category,to_category)] = 1
+                citations[(citer,cited)] = 1
 
 # Format element data as csv for Kumu data visualization
 def outputElements():
